@@ -1,0 +1,7 @@
+<li><%= link_to article.title, article.url %>
+  <ul>
+    <li><%= article.author.username %></li>
+    <li><%= comment_link(article) %></li>
+    <li><%= time_ago_in_words(article.created_at) %> ago</li>
+  </ul>
+</li>
