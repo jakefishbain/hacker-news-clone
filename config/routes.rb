@@ -5,8 +5,12 @@ Rails.application.routes.draw do
       get 'comments'
     end
   end
-  resources :articles
-  resources :comments, except: [:index, :show]
+
+  resources :articles do
+    member do
+      resources :comments, except: [:index, :show]
+    end
+  end
 
   root 'articles#index'
 end

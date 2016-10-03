@@ -1,7 +1,7 @@
 <h1><%= link_to @article.title, @article.url %></h1>
 <h4><%= comment_link(@article) %></h4>
 
-
+<%= render 'new_comment' %>
 
 <ul>
   <%= render partial: 'comment', collection: @article.comments, as: :comment %>
