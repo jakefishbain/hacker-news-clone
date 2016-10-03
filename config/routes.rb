@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
   resources :articles
   resources :comments, except: [:index, :show]
+
+  root 'articles#index'
 end
